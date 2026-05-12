@@ -1,14 +1,19 @@
+
 #include <stdio.h>
 int main ()
 {
     char vocales[5] = {'a','e','i','o','u'};
     char *ptr;
     ptr=&vocales[0];
+
     for (int i=0 ; i < 5 ; i++)
     {
+        if (*(ptr+i) == 'o') {
+            *(ptr+i) = 'x';
+        }
 
         printf("%c",vocales[i]);
-         printf("%c\n",*(ptr+i));
+        printf("%c\n",*(ptr+i));
     }
 
 }
